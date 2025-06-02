@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bro4Tech</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #app {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .spa-router {
+      display: none;
+    }
+  </style>
+  <script>
+    // Simple SPA router
+    window.addEventListener('DOMContentLoaded', () => {
+      const path = window.location.pathname;
+      // Redirect to index.html for all routes
+      if (path !== '/' && !document.referrer.includes(window.location.host)) {
+        window.history.replaceState({}, '', '/');
+      }
+    });
+  </script>
+</head>
+<body>
+  <div id="app">
+    <!-- This file serves as a fallback for all routes -->
+    <script>
+      // Immediately redirect to the React app
+      window.location.href = '/';
+    </script>
+  </div>
+</body>
+</html>

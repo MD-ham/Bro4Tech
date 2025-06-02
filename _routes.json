@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "include": [
+    "/*"
+  ],
+  "exclude": [],
+  "routes": [
+    {
+      "src": "/se.*",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/sy.*",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
