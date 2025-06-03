@@ -1,7 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/se/(.*)", "destination": "/index.html" },
-    { "source": "/sy/(.*)", "destination": "/index.html" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
-}
